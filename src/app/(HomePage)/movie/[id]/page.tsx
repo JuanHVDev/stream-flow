@@ -1,19 +1,32 @@
 import { getMovie } from "@/actions/getMovie";
 import { formatMoney } from "@/utils/formatMoney";
-import { getMovieReleaseYear } from "@/utils/getMovieReleaseYear";
-import Image from "next/image";
 
+import { CardContent, Card } from "@/components/ui/card"
+import { Label } from "@/components/ui/label"
+import { Badge } from "@/components/ui/badge";
+import CircularProgress from "@/components/CircularProgress";
+import { Metadata, ResolvingMetadata } from "next";
 interface Props
 {
   params: {
     id: string
   }
 }
+// export const openGraphImage = { images: ['http://...'] }
+export async function generateMetadata({ params: { id } }: Props, parent: ResolvingMetadata): Promise<Metadata>
+{
+  const movie = await getMovie(id)
+  return {
+    title: movie.title,
+    description: movie.overview,
+    authors: { name: "Juan" },
+    openGraph: {
+      title: movie.original_title,
+      description: movie.overview
+    }
+  }
+}
 
-import { CardContent, Card } from "@/components/ui/card"
-import { Label } from "@/components/ui/label"
-import { Badge } from "@/components/ui/badge";
-import CircularProgress from "@/components/CircularProgress";
 
 export default async function MoviePage({ params: { id } }: Props)
 {

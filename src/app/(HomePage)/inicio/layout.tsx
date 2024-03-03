@@ -1,7 +1,17 @@
+
 export const metadata = {
-  title: 'Home',
-  description: '',
-};
+
+  title: "Stream-Flow",
+  description: "App de streaming para peliculas y series",
+  authors: { name: "Juan Herreraa Vazquez" },
+  keywords: [
+    "streaming",
+    "peliculas",
+    "series",
+    "movil",
+  ],
+  type: "website",
+}
 export default function InicioLayout({
   children
 }: {
