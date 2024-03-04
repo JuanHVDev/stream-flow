@@ -6,6 +6,7 @@ import { Label } from "@/components/ui/label"
 import { Badge } from "@/components/ui/badge";
 import CircularProgress from "@/components/CircularProgress";
 import { Metadata, ResolvingMetadata } from "next";
+import Image from "next/image";
 interface Props
 {
   params: {
@@ -89,30 +90,35 @@ export default async function MoviePage({ params: { id } }: Props)
               <dt className="font-semibold">Budget</dt>
               <dd>{formatMoney(movie.budget)}</dd>
             </dl>
+            <dl className="grid grid-cols-2 gap-1 text-sm">
+              <dt className="font-semibold">Popularity</dt>
+              <dd>{movie.popularity}</dd>
+            </dl>
+          </div>
+
+          <div className="grid gap-4 md:gap-10 items-start">
+            <div className="grid gap-2">
+              <Label className="text-lg" htmlFor="overview">
+                Overview
+              </Label>
+              <p>
+                {movie.overview}
+              </p>
+            </div>
           </div>
         </div>
-        <div className="grid gap-4 items-start md:items-center">
-          <Card>
-            <CardContent className="p-4">
-              <img
-                alt="Poster"
-                className="aspect-[3/4] object-cover rounded-lg overflow-hidden"
+        <div className="grid gap-4 items-center md:items-center">
+          <Card className="w-full mx-auto">
+            <CardContent className="p-4 w-full">
+              <Image
+                alt={movie.title + "Poster"}
+                className="aspect-[3/4] object-cover rounded-lg overflow-hidden w-full"
                 height={600}
                 src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
                 width={400}
               />
             </CardContent>
           </Card>
-        </div>
-      </div>
-      <div className="grid gap-4 md:gap-10 items-start">
-        <div className="grid gap-2">
-          <Label className="text-lg" htmlFor="overview">
-            Overview
-          </Label>
-          <p>
-            {movie.overview}
-          </p>
         </div>
       </div>
     </div>

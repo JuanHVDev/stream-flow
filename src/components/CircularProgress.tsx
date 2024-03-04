@@ -11,7 +11,7 @@ const CircularProgress = ({ percent }: { percent: number }) =>
       <svg className="w-20 h-20">
         <circle
           className="text-gray-300"
-          stroke-width="5"
+          strokeWidth="5"
           stroke="currentColor"
           fill="transparent"
           r="30"

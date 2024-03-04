@@ -20,6 +20,7 @@ export default function InicioLayout({
 {
   return (
     <section>
+      
       {children}
     </section>
   );
