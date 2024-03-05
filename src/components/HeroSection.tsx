@@ -1,12 +1,10 @@
-import { getMoviesPopularityUnique } from "@/actions/getMoviesPopular"
-import { DataMovies } from "../../types"
-import { Card, CardHeader, CardTitle } from "./ui/card"
+import { getMoviesPopularityUnique } from "@/actions/getMovieUnique"
 import { Button } from "./ui/button"
 
 
 const HeroSection = async () =>
 {
-  const movie = await getMoviesPopularityUnique(1)
+  const movie = await getMoviesPopularityUnique()
   return (
     <section
       className="relative h-[calc(100vh-4rem)] bg-cover bg-center text-white"
