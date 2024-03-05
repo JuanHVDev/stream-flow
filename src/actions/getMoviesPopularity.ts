@@ -7,5 +7,5 @@ export const getMoviesTopRated = async () => {
         `https://api.themoviedb.org/3/movie/top_rated?api_key=${process.env.IMDB_API_KEY}&language=en-US&page=1`
     );
     const data: DataMovies = await response.json();
-    return data;
+    return data.results;
 };

@@ -17,7 +17,7 @@ export default async function HomePage()
           Top Rated
         </h1>
       </div>
-      <CarouselMovie movies={moviesTopRated.results} />
+      <CarouselMovie movies={moviesTopRated} />
       <GridMoviesPopularity data={data} />
     </div>
   )
