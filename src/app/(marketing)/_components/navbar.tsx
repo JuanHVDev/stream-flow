@@ -13,13 +13,13 @@ const Navbar = () =>
       <div className="ml-auto flex gap-4">
         <Link
           className="inline-flex h-9 items-center justify-center rounded-md bg-gray-900 px-4 py-2 text-sm font-medium text-gray-50 hover:bg-gray-900/90 hover:text-gray-50 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 dark:bg-gray-50 dark:text-gray-950 dark:hover:bg-gray-50/90 dark:hover:text-gray-950 dark:focus-visible:ring-gray-300"
-          href="#"
+          href="/login"
         >
           Log in
         </Link>
         <Link
           className="inline-flex h-9 items-center justify-center rounded-md border border-gray-200 border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 dark:border-gray-800 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
-          href="#"
+          href="/register"
         >
           Sign up
         </Link>
