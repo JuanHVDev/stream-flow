@@ -5,6 +5,8 @@ import FormRegister from "../_components/FormRegister";
 export default function RegisterPage()
 {
   return (
-    <CardWrapper title="Stream Flow" children={<FormRegister />} />
+    <CardWrapper title="Stream Flow">
+      <FormRegister />
+    </CardWrapper>
   );
 }
