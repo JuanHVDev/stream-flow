@@ -10,7 +10,7 @@ export default async function HomePage()
   const data = await getMoviesPopularity(1)
   const moviesTopRated = await getMoviesTopRated()
   return (
-    <div className='w-full '>
+    <div className='w-full container '>
       <HeroSection />
       <div className='w-full mx-auto'>
         <h1 className="text-3xl font-bold my-6">

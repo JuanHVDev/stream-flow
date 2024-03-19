@@ -2,6 +2,8 @@
 
 import CardMovieItem from "@/components/CardMovieItem";
 import { DataMovies } from "../../types";
+import { Suspense } from "react";
+import SkeletonMovies from "@/components/SkeletonMovies";
 
 export const getMoviesPopularity = async (page: number = 1) =>
 {
@@ -11,8 +13,10 @@ export const getMoviesPopularity = async (page: number = 1) =>
   const data: DataMovies = await response.json();
   return data.results.map((movie, index) => (
     <div key={movie.id + index}>
-      <CardMovieItem movie={movie} index={index} />
+      <Suspense fallback={<SkeletonMovies index={index} />}>
+        <CardMovieItem movie={movie} index={index} />
+      </Suspense>
+
     </div>
   ))
-
 };

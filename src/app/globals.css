@@ -63,3 +63,7 @@ body,
         @apply bg-background text-foreground;
     }
 }
+
+.active-underline {
+    @apply absolute top-0 left-0 w-full h-full -z-10 border-primary border-b-8 p-2;
+}

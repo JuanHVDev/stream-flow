@@ -1,6 +1,8 @@
+import Navbar from "@/components/Navbar";
+
+export const revalidate = 60 * 60 * 24 * 7
 
 export const metadata = {
-
   title: "Stream-Flow",
   description: "App de streaming para peliculas y series",
   authors: { name: "Juan Herreraa Vazquez" },
@@ -20,7 +22,7 @@ export default function InicioLayout({
 {
   return (
     <section>
-      
+      <Navbar />
       {children}
     </section>
   );

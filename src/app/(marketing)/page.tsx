@@ -59,7 +59,7 @@ export default function MarketingPage()
             <div className="space-x-4 mt-10 max-w-xl w-full mx-auto">
               <Button size="lg" asChild className="inline-flex h-9 items-center justify-center rounded-md px-4 py-2 text-sm font-medium text-gray-50 shadow transition-colors  focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:focus-visible:ring-gray-300">
                 <Link
-                  href="/inicio"
+                  href="/register"
                 >
                   Comienza ahora
                 </Link>
